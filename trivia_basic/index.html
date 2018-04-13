@@ -8,13 +8,15 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 
 <header>
 
     <div class="container">
         <div class="jumbotron">
-          <h1>Harry Potter Trivia</h1>
+          <h1 id="jumbotronH1">Harry Potter Trivia</h1>
         </div>
     </div>    
 
@@ -22,23 +24,125 @@
 
 <body>
 
-    <div class="container">
+    <div class="container" id="startScreen">
 
         <div class="row">
 
             <div class="col-md-12">
-
                 <h3>
                     Click Start To Begin
                 </h3>
                 <p>
                     10 Trivia Questions About Harry Potter!
                 </p>
-<br>
                 <button type="button" class="btn" id="startButton">
                     Start
                 </button>
+            </div>
 
+        </div>
+    </div>
+
+    <div class="container hidden1" id="triviaQuestions">
+
+        <div class="row" id="counterRow">
+
+            <div class="col-md-5" id="countdown">
+                <p>
+                    Countdown
+                </p>
+            </div>
+            <div class="col-md-2" id="counter">
+                <p>
+                    90
+                </p>
+            </div>
+            <div class="col-md-5" id="timer">
+                <p>
+                    Timer
+                </p>
+            </div>
+        </div>
+
+        <div class="row" id="questions">
+
+            <div class="col-md-12">
+                <form action="">
+                    <span id="q1"><strong>Question 1:</strong> What is not a house in Hogwarts</span><br>
+                    <input type="radio" name="q1" data-value="false"> Hufflepuff <br>
+                    <input type="radio" name="q1" data-value="false"> Gryffindor <br>
+                    <input type="radio" name="q1" data-value="true" id="answer1"> Horned Serpent <br>
+                    <input type="radio" name="q1" data-value="false"> Ravenclaw <br>
+                    <hr>
+                    <span id="q2"><strong>Question 2:</strong> What is the train station that Harry Potter board the train to Hogwarts?</span><br>
+                    <input type="radio" name="q2" data-value="false"> Paddington <br>
+                    <input type="radio" name="q2" data-value="true" id="answer2"> Kings Crossing <br>
+                    <input type="radio" name="q2" data-value="false"> Waterloo <br>
+                    <input type="radio" name="q2" data-value="false"> Charing Crossing <br>
+                    <hr>
+                    <span id="q3"><strong>Question 3:</strong>What are Harry Potter's parents' names?</span><br>
+                    <input type="radio" name="q3" data-value="false"> Rose and Jack <br>
+                    <input type="radio" name="q3" data-value="false"> Petunia and Vernon <br>
+                    <input type="radio" name="q3" data-value="false"> Ennis and Jack <br>
+                    <input type="radio" name="q3" data-value="true" id="answer3"> Lily and James <br>
+                    <hr>
+                    <span id="q4"><strong>Question 4:</strong> What is the name of the house elf freed by Harry Potter?</span><br>
+                    <input type="radio" name="q4" data-value="true" id="answer4"> Dobby <br>
+                    <input type="radio" name="q4" data-value="false"> Keebler <br>
+                    <input type="radio" name="q4" data-value="false"> Winky <br>
+                    <input type="radio" name="q4" data-value="false"> Kreacher <br>
+                    <hr>
+                    <span id="q5"><strong>Question 5:</strong> What are the creatures whom suck the souls out of people?</span><br>
+                    <input type="radio" name="q5" data-value="false"> Basilisk <br>
+                    <input type="radio" name="q5" data-value="false"> Hegwig <br>
+                    <input type="radio" name="q5" data-value="true" id="answer5"> Dementors <br>
+                    <input type="radio" name="q5" data-value="false"> Hippogriff <br>
+                    <hr>
+                    <span id="q6"><strong>Question 6:</strong> What is not a Horcrux?</span><br>
+                    <input type="radio" name="q6" data-value="false"> Harry Potter <br>
+                    <input type="radio" name="q6" data-value="true" id="answer6"> Sorcerer's Stone <br>
+                    <input type="radio" name="q6" data-value="false"> Locket <br>
+                    <input type="radio" name="q6" data-value="false"> Nagini, the snake <br>
+                    <hr>
+                    <span id="q7"><strong>Question 7:</strong> Who is known as <i>The One Who Shall Not Be Named</i>?</span><br>
+                    <input type="radio" name="q7" data-value="false"> Bellatrix Lestrange <br>
+                    <input type="radio" name="q7" data-value="true" id="answer7"> Lord Voldemort <br>
+                    <input type="radio" name="q7" data-value="false"> Barty Crouch, Jr. <br>
+                    <input type="radio" name="q7" data-value="false"> Draco Malfoy <br>
+                    <hr>
+                    <span id="q8"><strong>Question 8:</strong> What did Albus Dumbledore leave for Ron in his will?</span><br>
+                    <input type="radio" name="q8" data-value="false"> Sword of Gryffindor <br>
+                    <input type="radio" name="q8" data-value="false"> The Golden Snitch <br>
+                    <input type="radio" name="q8" data-value="true" id="answer8"> Deluminator <br>
+                    <input type="radio" name="q8" data-value="false"> Cloak of Invisibility <br>
+                    <hr>
+                    <span id="q9"><strong>Question 9:</strong> What was Harry Potter’s Patronus?</span><br>
+                    <input type="radio" name="q9" data-value="false"> Fox <br>
+                    <input type="radio" name="q9" data-value="false"> Otter <br>
+                    <input type="radio" name="q9" data-value="false"> Weasel <br>
+                    <input type="radio" name="q9" data-value="true" id="answer9"> Stag <br>
+                    <hr>
+                    <span id="q10"><strong>Question 10:</strong> How many kids are in the Weasley family?</span><br>
+                    <input type="radio" name="q10" data-value="false"> 10 <br>
+                    <input type="radio" name="q10" data-value="false"> 6 <br>
+                    <input type="radio" name="q10" data-value="true" id="answer10"> 7 <br>
+                    <input type="radio" name="q10" data-value="false"> 5 <br>
+                    <hr>
+                    <button type="button" class="btn" id="submitButton">
+                            Submit
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container" id="score">
+
+        <div class="row">
+
+            <div class="class-md-12" id="scoreResults">
             </div>
 
         </div>
@@ -47,5 +151,6 @@
 
 </body>
 
+<script src="assets/javascript/script.js"></script>
 
 </html>

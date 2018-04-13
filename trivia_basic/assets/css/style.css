@@ -1,0 +1,74 @@
+body {
+    background-image: url('../image/background.jpg');
+    /*background-size: cover;*/
+    font-family: "fantasy";
+}
+
+.jumbotron {
+    padding: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#jumbotronH1 {
+    align-content: center;
+    margin: 10px;
+}
+
+#startScreen {
+    background-color: #eee;
+    text-align: center;
+}
+
+#startButton {
+    margin: 15px;
+}
+
+#triviaQuestions {
+    background-color: #eee;
+}
+
+#counterRow {
+    border: 10px;
+    border-color: black;
+}
+
+#countdown {
+    text-align: right;
+    font-weight: bold;
+}
+
+#counter {
+    text-align: center;
+}
+
+#timer {
+    font-weight: bold;
+}
+
+#scoreResults {
+    background-color: #eee;
+    text-align: center;
+}
+
+.hidden1{
+	display:none;
+}
+
+.hidden2{
+	display:none;
+}
+
+.hidden3{
+	display:none;
+}
+
+.hidden4{
+	display:none;
+}
+
+
+.visible{
+    display:block;
+}
