@@ -43,7 +43,7 @@
         </div>
     </div>
 
-    <div class="container hidden1" id="triviaQuestions">
+    <div class="container divHidden" id="triviaQuestions"> <!--Removed hidden1 from div class-->
 
         <div class="row" id="counterRow">
 
@@ -54,7 +54,7 @@
             </div>
             <div class="col-md-2" id="counter">
                 <p>
-                    90
+                    60
                 </p>
             </div>
             <div class="col-md-5" id="timer">
@@ -138,11 +138,23 @@
 
     </div>
 
-    <div class="container" id="score">
+    <div class="container divHidden" id="score"> 
 
         <div class="row">
 
-            <div class="class-md-12" id="scoreResults">
+            <div class="class-md-12" id="scoreResults">  <!--Removed hidden3 from div class-->
+
+                <p id="scoreResultsP">
+                    <strong>Harry Potter Trivia Score</strong>:  
+                    <br>Questions Answered Correctly: <span id="trueAnswers"> 0 </span>
+                    <br>Questions Answered Incorrectly: <span id="falseAnswers"> 0 </span>
+                    <br>Unanswered Questions: <span id="unanswerAnswers"> 10 </span>
+                </p>
+                <br>
+                <button type="button" class="btn" id="resetButton">
+                        Reset
+                </button>
+
             </div>
 
         </div>
