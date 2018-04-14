@@ -167,6 +167,17 @@ function reset() {
         unanswered: 10,
     };
 
+    $('input[name="q1"]').prop('checked', false);
+    $('input[name="q2"]').prop('checked', false);
+    $('input[name="q3"]').prop('checked', false);
+    $('input[name="q4"]').prop('checked', false);
+    $('input[name="q5"]').prop('checked', false);
+    $('input[name="q6"]').prop('checked', false);
+    $('input[name="q7"]').prop('checked', false);
+    $('input[name="q8"]').prop('checked', false);
+    $('input[name="q9"]').prop('checked', false);
+    $('input[name="q10"]').prop('checked', false);
+
     $("#startScreen").removeClass("divHidden");
 
     $("#triviaQuestions").addClass("divHidden");
