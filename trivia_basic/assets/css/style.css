@@ -21,17 +21,12 @@ body {
     text-align: center;
 }
 
-#startButton {
+/*#startButton {
     margin: 15px;
-}
+}*/
 
 #triviaQuestions {
     background-color: #eee;
-}
-
-#counterRow {
-    border: 10px;
-    border-color: black;
 }
 
 #countdown {
@@ -52,6 +47,19 @@ body {
     text-align: center;
 }
 
+#scoreResultsP {
+    padding-top: 10px;
+}
+
+/*#resetButton {
+    margin: 15px;
+}*/
+
+.btn {
+    margin: 15px;
+}
+
+/*
 .hidden1{
 	display:none;
 }
@@ -68,7 +76,11 @@ body {
 	display:none;
 }
 
-
 .visible{
     display:block;
+} 
+*/
+
+.divHidden {
+	display:none;   
 }
